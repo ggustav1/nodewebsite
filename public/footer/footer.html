@@ -1,0 +1,47 @@
+<footer>
+    <div class="row text-center">
+        <div class="col-4">
+            <p>Node JS</p>
+        </div>
+        <div class="col-4">
+            <p>Licensed to Gustav Vingtoft 2020</p>
+        </div>
+        <div class="col-4">
+            <p>KEA - Datamatiker</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // Check if I have jQuery installed
+        console.log($);
+
+        // Animaion
+        $("#panel1").slideUp(1000).slideDown(1000);
+
+        // Mouse hover
+        $("#panel2").on('mouseover', function () {
+            $("#panel2").slideUp(1000).slideDown(1000);
+
+        });
+
+        // change the css
+        $("#panel4").css({color:'red'});
+
+        // on click panel one will toggle
+        $("#btn1").on('click', function() {
+            $("#panel4").toggle(1000);
+        });
+
+
+    })
+
+
+</script>
+
+</body>
+</html>
