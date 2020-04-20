@@ -1,0 +1,76 @@
+<!-- Start Node content-->
+<div class="content">
+
+    <!-- Start Header -->
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col text-center">
+                <h1>Node Documentation:</h1>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Page content-->
+    <div class="container">
+        <p>Node.js is an open-source, cross-platform runtime system made for developing server-side webapplications</p>
+        <p>Node.js is written in Javascript and can compile in node.js runtime on many platforms.</p>
+        <p>Syntax examples:</p>
+        <ul>
+            <li>var</li>
+            <li>let</li>
+            <li>const</li>
+        </ul>
+        <p>3 different kinds of syntax as listed above.</p>
+        <p>"var" is used as a stanadrd global variable notation, while "let" is a notation used inside a scope and "const" is the notation used when a variable holds a value it is initiated with and therefor not changing, which explains the word "constant" since the value is constant</p>
+        <br>
+        <br>
+        <h4>Strings:</h4>
+        <p>Strings is a key component in many code-langugages and javascript and node.js is no excuse.</p>
+        <p>Strings can be set to a variable on for example be logged to the console:</p>
+        <p>let animal = "dog"</p>
+        <p>console.log("my animal is a ", animal)</p>
+        <p>Output: my animal is a dog</p>
+        <p>We can also use <b>template string</b> with backtics as string identifiers. This way we can actually insert variables into text:</p>
+        <p>let firstname = "Gustav"</p>
+        <p>let myName = `My name is ${firstName}`</p>
+        <p>console.log(myName)</p>
+        <p>Output: My name is Gustav</p>
+
+        <h4>Loops</h4>
+        <p>Loops a very important part of node.js. We have different types of loops that we use for different use-cases</p>
+        <p><b>For-loops</b> is used with the keyword "for". We can for example use a for-loop to loop through an array of json objecs to find values that we wish to sort</p>
+        <p>Use case example:</p>
+        <p>An array of JSON objects with users containging an age key and value are needed to sort which users are allowed to see certain movies.</p>
+        <p><b>Code:</b></p>
+        <p>let array[] = [{...}, {...}, {...}, {...}, {...}, {...}, {...}]</p>
+        <p>Object: = { name: "Gustav", age: 23 }</p>
+        <p>
+            for (let i = 0; i < array.length; i++) {
+        </p>
+        <p>const age = array[i].age</p>
+        <p>if (age > 15) {</p>
+        <p>You are allowed to watch this</p>
+        <p>}</p>
+        <p>}</p>
+        <p>In this example we loop through all the objecs inside the array and they check the value of the key "age" inside the object. If the value is above 15 the if statement will be true and are allowed to proceed</p>
+        <br>
+        <p>While loops are also a big player. They should be used with caution though, because you can end in a <b>deadlock</b> if the statement is not terminated or updated</p>
+
+        <h4>Arrays</h4>
+        <p>We used array in the above example. As seend in the for-loop condidation we use the array.length method, which returns the number of objects in the array. </p>
+        <p>Besides the .length example, we can also use .push, .pop. and .slice among others</p>
+        <br>
+        <p>Pop</p>
+        <p>Will remove the last element in an array and return it</p>
+        <p>Example:</p>
+        <p>let people = ["Gert", "Torsten", "Jens"]</p>
+        <p>people.pop()</p>
+        <p>console.log(peope)</p>
+        <p>Output: ["Gert", "Torsten"]</p>
+    </div>
+
+    <!-- End Page content-->
+
+</div>
+<!-- End Node content-->

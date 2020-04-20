@@ -26,6 +26,8 @@ const navbarPage = fs.readFileSync(__dirname + "/public/navbar/navbar.html", "ut
 const frontPagePage = fs.readFileSync(__dirname + "/public/frontpage/frontpage.html", "utf8");
 const jqueryPage = fs.readFileSync(__dirname + "/public/jquery-examples/jquery-examples.html", "utf8");
 const footerPage = fs.readFileSync(__dirname + "/public/footer/footer.html", "utf8");
+const nodePage = fs.readFileSync(__dirname + "/public/node-documentation/node.html", "utf8");
+const commands = fs.readFileSync(__dirname + "/public/commands/commands.html", "utf8");
 
 
 
@@ -35,5 +37,13 @@ app.get("/", (req, res ) => {
 
 app.get("/jquery-examples", (req, res) => {
    return res.send(navbarPage + jqueryPage + footerPage)
+});
+
+app.get("/node", (req, res) => {
+   return res.send(navbarPage + nodePage + footerPage)
+});
+
+app.get("/commands", (req, res) => {
+    return res.send(navbarPage + commands + footerPage)
 });
 

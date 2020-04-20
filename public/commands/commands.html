@@ -1,0 +1,74 @@
+<!-- Start Node content-->
+<div class="content">
+
+    <!-- Start Header -->
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col text-center">
+                <h1>Commands:</h1>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Page content-->
+    <div class="container">
+        <h4>Classic terminal commnads</h4>
+        <p>Being able to route in your terminal can be a very handy thing to do, which can save you alot of time and work</p>
+        <p>The most used commands are as follows</p>
+        <ul>
+            <li>ls</li>
+            <li>cd</li>
+            <li>mkdir</li>
+            <li>rmdir</li>
+        </ul>
+        <p>"ls" stands List Files. When this command is given in the terminal, the terminal will list all files in the directory you are currently in</p>
+        <p>"cd" stand for change directory. There are different ways to use cd. If you type cd and hit enter, your terminal will go to the root directory. If you type cd ../ your terminal will jump back one directory. If you type example cd movies you terminal will change to the movies directory, if there is such a directory avabile</p>
+        <p>"mkdir" stands for make directory. This is very self explanatory.</p>
+        <p>"rmdir" stands for remove directory. This is also very self explanatory</p>
+        <h4>Node</h4>
+        <p>To install and use node we use commands in our terminal. Examples of these commands are the npm (Node Package Manager)</p>
+        <p>The most common command to run is the npm install. When we run "npm install" we get all our dependencies in our package.json. These dependises are then added to our node_modules which is a folder with the same name i.e "node_modulers", which can we found at our library root</p>
+        <p>We use <b>npm run</b> to run scripts from our package.json file. The scripts can for example be which port to use when we run our application or if we want to run the application in a dev mode</p>
+        <br>
+        <p><b>nodemon</b> is utility til will monitor for any changes in our source and restart the server when sensing a change to the code. We therefore use nodemon when we develop our apps</p>
+        <p>In order to use nodemon we use our Node Package Manger and in our terminal run "npm install -g nodemon" (the "-g" stand for gloabally)</p>
+        <p>We can then serve our app with nodemon by either type "nodemon app.js" to the file we want to run or make a script on our package.json like this: "startdev": "cross-env PORT=3000 nodemon app.js</p>
+        <p>So in other words, we use node to launch our applications and nodemon when we develop them</p>
+        <p>Last option is to also use <b>budo</b>, which we can use if we wish to launch html files and be able to see the changes we make efficiently, with a live-reload. To do so we use budo-commands. This is good because budo doesn't care about back-end changes and doesn't update those, but only focues on our html and css.</p>
+        <p>We run budo with pnx so it doesn't run globally like this: </p>
+        <p>npx budo app.js</p>
+        <p>If you for example wish live reload you add "--live" after your command like "npx budo app-js --live"</p>
+        <br>
+        <h4>Express</h4>
+        <p>We use Express to serve our webapplications. </p>
+        <p>Since Express is a web framework for Node.js we have to install first. To do so we run the following command in our terminal:</p>
+        <p>"$ npm install express --save"</p>
+        <p>We can now access Express to serve our application</p>
+        <p>In order to do so  we have to import Express into our initial js file like this: <b>const express = require("express")</b></p>
+        <p>We can then parse express with initialization express to a consant and run the follow code</p>
+        <p><i>const app = express();</i></p>
+        <p><i>app.use(express.json());</i></p>
+        <p><i>app.use(express.static('public'));</i></p>
+        <p>Also we need to make express listen a custom port, in our case port 3000</p>
+        <p><i>const port = process.env.PORT ? process.env.PORT : 3000;</i></p>
+        <p><i>const server = app.listen(port, (error) => { <br>
+            if (error) { <br>
+            console.log('something went wrong with starting the server', error);
+            } <br> <br>
+            console.log('Server is running on port', server.address().port);
+            <br>
+            });</i></p>
+        <p>Now we can use Express to run </p>
+        <p>In order to do so we use the following method:</p>
+        <p>app.get("/", (req, res ) => {<br>
+            return res.send(navbarPage + frontPagePage + footerPage)<br>
+            });</p>
+        <p>This method allows us to access our frontpage when we request to route to "/"</p>
+        <br>
+    </div>
+
+    <!-- End Page content-->
+
+</div>
+<!-- End Node content-->
